@@ -16,48 +16,7 @@
     </div>
 
     @push('js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Menggunakan jQuery untuk menampilkan dan menyembunyikan modal
-        $(document).ready(function () {
-            // Menampilkan modal saat tombol "Toggle modal" ditekan
-            $('#toggle-modal').click(function () {
-                $('#popup-modal').show();
-                $('#popup-modal').removeClass('hidden');
-                $('#popup-modal').addClass('!flex');
-
-                $('#popup-modal').removeClass('hidden translateY-[-30px] opacity-0');
-                $('#popup-modal').addClass('translate-y-0 opacity-100');
-            });
-    
-            // Menyembunyikan modal saat tombol "Close modal" ditekan
-            $('#close-modal').click(function () {
-                $('#popup-modal').hide();
-                $('#popup-modal').addClass('hidden');
-                $('#popup-modal').removeClass('!flex');
-
-                $('#popup-modal').addClass('hidden translateY-[-30px] opacity-0');
-                $('#popup-modal').removeClass('translate-y-0 opacity-100');
-            });
-    
-            // Menyembunyikan modal saat tombol "No, cancel" ditekan
-            $('#cancel-delete').click(function () {
-                $('#popup-modal').hide();
-                $('#popup-modal').addClass('hidden');
-                $('#popup-modal').removeClass('!flex');
-
-                $('#popup-modal').addClass('hidden translateY-[-30px] opacity-0');
-                $('#popup-modal').removeClass('translate-y-0 opacity-100');
-            });
-    
-            // Handling logika ketika tombol "Yes, I'm sure" ditekan
-            $('#confirm-logout').click(function () {
-                // Lakukan tindakan yang sesuai, misalnya menghapus produk
-                // Setelah itu, Anda bisa menyembunyikan modal jika perlu
-                // $('#popup-modal').hide();
-            });
-        });
-    </script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     @endpush
 
     @push('modals')
