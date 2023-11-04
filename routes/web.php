@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ManageUsersController;
+use App\Http\Controllers\UsulanProposalsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,9 @@ Route::middleware([
     })->name('dashboard');
     Route::resource('manage-users', ManageUsersController::class)->names([
         'index' => 'manage-users'
+    ]);
+    Route::resource('seminar-proposal', UsulanProposalsController::class)->names([
+        'index' => 'seminar-proposal',
+        'create' => 'create-seminar-proposal',
     ]);
 });

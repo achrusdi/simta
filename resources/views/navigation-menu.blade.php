@@ -15,6 +15,9 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('seminar-proposal') }}" :active="request()->routeIs('seminar-proposal')">
+                        {{ __('Usulan Proposal') }}
+                    </x-nav-link>
                     <x-nav-link href="{{ route('manage-users') }}" :active="request()->routeIs('manage-users')">
                         {{ __('Manage Users') }}
                     </x-nav-link>
@@ -289,10 +292,6 @@
                             class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
                             Sign out
                         </button>
-
-                        {{-- <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                            {{ __('Log Out') }}
-                        </x-dropdown-link> --}}
                     </form>
                     <button type="button"
                         class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
